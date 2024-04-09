@@ -12,6 +12,8 @@ Vagrantfile template for Kali Linux, ready for use with Hyper-V and VirtualBox.
 
 Hyper-V is the default provider. Just comment the Hyper-V section and uncomment the VirtualBox section to change this.
 
+*NOTE: You will need to run `kali-tweaks` on first boot and install the Hyper-V utilities within the guest for enhanced session mode.*
+
 Share a `provisioning/` folder containing your playbooks or roles from the current directory to run ansible from the Vagrant host by uncommenting the following lines:
 
 ```
@@ -21,3 +23,5 @@ Share a `provisioning/` folder containing your playbooks or roles from the curre
   #  ansible.playbook = "provisioning/playbook.yml"
   #end
 ```
+
+*NOTE: [Support in running ansible from a Windows host is limited to WSL](https://docs.ansible.com/ansible/latest/os_guide/windows_faq.html#windows-faq-ansible).*
