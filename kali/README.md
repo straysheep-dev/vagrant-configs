@@ -24,4 +24,4 @@ Share a `provisioning/` folder containing your playbooks or roles from the curre
   #end
 ```
 
-*NOTE: [Support in running ansible from a Windows host is limited to WSL](https://docs.ansible.com/ansible/latest/os_guide/windows_faq.html#windows-faq-ansible).*
+*NOTE: [Ansible support is limited to WSL on a Windows host](https://docs.ansible.com/ansible/latest/os_guide/windows_faq.html#windows-faq-ansible).*
