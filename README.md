@@ -40,6 +40,8 @@ The commands below do the following:
 
 1. Obtain the Vagrantfile from [Kali's listings on Vagrant Cloud](https://app.vagrantup.com/kalilinux/boxes/rolling) and initialize this directory for a new VM
 2. Downloads the `.box` file from Vagrant Cloud if it's missing or a new version is available, and starts the VM using the default provider installed (usually VirtualBox, VMware or Hyper-V)
+	- If you already have the box specified in the Vagrantfile as `config.vm.box` available locally, `vagrant up` will provision, register, and start the VM without downloading anything
+	- Basically with the `.box` available, and a Vagrantfile, you can skip `vagrant init`
 3. Gracefully powers off the VM
 
 ```bash
@@ -527,3 +529,11 @@ To delete a network configuration:
 nmcli show
 nmcli con delete id <profile-name>    # Alternatively, use `uuid <profile-uuid>` instead of `id <profile-name>`
 ```
+
+
+Windows, AD, Home Labs
+=====================
+
+The [GOAD (Game of AD) project](https://github.com/Orange-Cyberdefense/GOAD) uses Windows boxes prepared by [StefanScherer/packer-windows](https://github.com/StefanScherer/packer-windows), which are referenced in [Microsoft documentation for deploying Vagrant images](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/local-vagrant-windows) locally. The [Vagrantfile](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/Vagrantfile) is available on Microsoft's [azure_arc GitHub](https://github.com/microsoft/azure_arc).
+
+Windows versions from 2016 / 10 to 2022 / 11 are available on [Stefan Scherer's Vagrant Cloud](https://app.vagrantup.com/StefanScherer).
